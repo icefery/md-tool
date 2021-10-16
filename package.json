@@ -1,0 +1,21 @@
+{
+  "name": "@icefery/md-util",
+  "version": "1.0.0",
+  "main": "target/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "icefery",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.11.0"
+  },
+  "dependencies": {
+    "commonmark": "^0.30.0",
+    "js-yaml": "^4.1.0",
+    "prettier": "^2.4.1"
+  }
+}
