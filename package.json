@@ -1,5 +1,5 @@
 {
-  "name": "@icefery/md-util",
+  "name": "@icefery/md-tool",
   "version": "1.0.0",
   "main": "target/index.js",
   "scripts": {
@@ -9,12 +9,16 @@
     "markdown"
   ],
   "author": "icefery",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^16.11.0"
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/icefery/md-tool.git"
   },
+  "license": "MIT",
   "dependencies": {
     "js-yaml": "^4.1.0",
     "prettier": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.0"
   }
 }

@@ -9,5 +9,24 @@
 ## 快速开始
 
 ```js
-// TODO
+const { format } = require('@icefery/md-tool')
+
+format('/your/doc', '/your/doc/root')
+```
+
+## 自定义
+
+```js
+const { format, plugins } = require('@icefery/md-tool')
+
+function customPlugin(filename, root, text) {
+  // TODO
+  return text
+}
+
+format(
+  '/your/doc',
+  '/your/doc/root',
+  [customPlugin, plugins.prettier]
+)
 ```

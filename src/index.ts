@@ -1,9 +1,11 @@
 import * as fs from 'fs'
 import * as path from 'path'
 
-import prettier from './plugin/pretttier'
-import frontMatter from './plugin/front-matter'
-import mvImage from './plugin/mv-image'
+import prettier from './plugins/pretttier'
+import frontMatter from './plugins/front-matter'
+import mvImage from './plugins/mv-image'
+
+export const plugins = { prettier, frontMatter, mvImage }
 
 export function format(
   filename: string,
@@ -12,7 +14,7 @@ export function format(
 ): void {
   let stat: fs.Stats
   try { stat = fs.statSync(filename) } catch (error) { return }
-  
+
   if (stat.isDirectory()) {
     fs.readdirSync(filename).forEach(it => format(path.join(filename, it), root, plugins))
   } else if (stat.isFile() && /\.md$/i.test(filename)) {
